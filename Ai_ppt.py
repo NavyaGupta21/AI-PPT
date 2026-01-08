@@ -1,5 +1,3 @@
-import os
-from dotenv import load_dotenv
 import streamlit as st
 from bs4 import BeautifulSoup
 from pptx import Presentation
@@ -12,11 +10,10 @@ from googlesearch import search
 from urllib.parse import urljoin
 from io import BytesIO
 
-load_dotenv()
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
     temperature=0.7,
-    google_api_key=os.getenv("GOOGLE_API_KEY"),
+    google_api_key=st.secrets["GOOGLE_API_KEY"],
     max_tokens=4000,
 )
 

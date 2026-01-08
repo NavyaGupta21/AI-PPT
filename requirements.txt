@@ -1,0 +1,9 @@
+streamlit
+beautifulsoup4
+python-pptx
+langchain-core
+langchain-google-genai
+langchain
+requests
+google
+python-dotenv
